@@ -21,7 +21,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "start": "yarn build & node build/app.js"
+    "start": "yarn build && node build/index.js"
   },
   "dependencies": {
     "dotenv": "^6.1.0",

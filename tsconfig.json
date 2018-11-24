@@ -1,11 +1,9 @@
 {
   "compilerOptions": {
-    "module": "system",
     "noImplicitAny": true,
     "removeComments": true,
     "preserveConstEnums": true,
-    "outFile": "build/app.js",
-    "sourceMap": true,
+    "outDir": "build",
     "esModuleInterop": true
   },
   "include": ["src/**/*"],
