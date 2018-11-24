@@ -20,6 +20,18 @@ from my responsabilities as a VIM user. :P
  [  ] Telegram
  [  ] Others?
 
+# Runnning
+
+Using yarn
+```bash
+  yarn && yarn start
+```
+
+Using docker:
+```
+docker-compose up
+```
+
 #Licence
 
 MIT
