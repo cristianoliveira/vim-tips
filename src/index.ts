@@ -1,5 +1,15 @@
-import { post } from './twitter';
-
 require('dotenv').config();
 
-post('Hello World');
+import { post } from './twitter';
+import {
+  fetchRandomTip,
+  fetchArticleDetails,
+  formatPost,
+} from './services/wikia';
+
+const postTwitter = post();
+
+fetchRandomTip()
+  .then(fetchArticleDetails)
+  .then(formatPost)
+  .then(postTwitter);
