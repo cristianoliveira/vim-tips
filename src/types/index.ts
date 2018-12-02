@@ -1,1 +1,1 @@
-import './random-item.d.ts';
+import './random-item';

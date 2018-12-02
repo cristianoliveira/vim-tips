@@ -29,20 +29,18 @@ type WikiaArticleDetails = {
 
 export const fetchRandomTip = (): Promise<WikiaArticle> =>
   axios
-    .get(`${API}/Articles/MostLinked`)
+    .get(`${API}/Articles/Top`)
     .then(articles => randomItem(articles.data.items));
 
 export const fetchArticleDetails = ({
   id,
-}: object): Promise<WikiaArticleDetail> =>
+}: WikiaArticleDetail): Promise<WikiaArticleDetail> =>
   axios
-    .get(`${API}/Articles/Details?&abstract=100&width=200&height=200&ids=${id}`)
+    .get(`${API}/Articles/Details?ids=${id}`)
     .then(({ data }) => data.items[id]);
 
 export const formatPost = (article: WikiaArticleDetail): string =>
-  `Vim tip of the day:
-${article.title}
-${article.abstract}
+  `Vim tip of the day: ${article.title}
 
 ${WIKI_URL}${article.url}
 `;

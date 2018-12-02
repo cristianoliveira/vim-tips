@@ -1,6 +1,6 @@
 import twit from 'twit';
 
-export const post = (): Function => {
+export const makePoster = (): any => {
   const config = {
     consumer_key: process.env.TWITTER_API_KEY,
     consumer_secret: process.env.TWITTER_API_SECRET,
