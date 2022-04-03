@@ -1,0 +1,11 @@
+on:
+  schedule:
+    # Post a new tip every day at 8:30
+    - cron: '30 8 * * *'
+
+jobs:
+  post_tip:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Every time
+        run: sh ./scripts/post-twitter.sh
