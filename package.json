@@ -6,6 +6,9 @@
   "repository": "git@github.com:cristianoliveira/vim-tips.git",
   "author": "Cristian Oliveira <contato@cristianoliveira.com.br>",
   "license": "MIT",
+  "engines" : {
+    "node" : ">=v17.4.0"
+  },
   "devDependencies": {
     "@types/jest": "^23.3.9",
     "@types/node": "^10.12.10",
