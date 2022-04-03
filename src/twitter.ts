@@ -1,13 +1,13 @@
 import twit from "twit";
 
-export const makePoster = (): any => {
-  const config = {
-    consumer_key: process.env.TWITTER_API_KEY,
-    consumer_secret: process.env.TWITTER_API_SECRET,
-    access_token: process.env.TWITTER_API_ACCESS_TOKEN,
-    access_token_secret: process.env.TWITTER_API_ACCESS_TOKEN_SECRET,
-  };
+type TwitterConfig = {
+  consumer_key: string;
+  consumer_secret: string;
+  access_token: string;
+  access_token_secret: string;
+};
 
+export const makePoster = (config: TwitterConfig): any => {
   const Twitter = new twit(config);
   return (msg: string): Promise<any> => {
     return new Promise((resolve, reject) => {
