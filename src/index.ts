@@ -7,7 +7,7 @@ import {
   fetchArticleDetails,
   formatPost,
 } from "./services/wikia";
-import { makePoster } from "./twitter";
+import { makePoster, TwitterConfig } from "./twitter";
 
 const app = express();
 const server = http.createServer(app);
@@ -16,7 +16,14 @@ const port = process.env.PORT || 4000;
 // It isn't a great api authentication but it does the job for now.
 const apiSecret = process.env.VIM_TIPS_API_SECRET || "api-secret";
 
-const postToTwitter = makePoster();
+const twitterConfigs: TwitterConfig = {
+  consumer_key: process.env.TWITTER_API_KEY,
+  consumer_secret: process.env.TWITTER_API_SECRET,
+  access_token: process.env.TWITTER_API_ACCESS_TOKEN,
+  access_token_secret: process.env.TWITTER_API_ACCESS_TOKEN_SECRET,
+};
+
+const postToTwitter = makePoster(twitterConfigs);
 
 app.use(express.json());
 app.get("/", async (req: express.Request, res: express.Response) => {

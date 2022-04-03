@@ -1,6 +1,6 @@
 import twit from "twit";
 
-type TwitterConfig = {
+export type TwitterConfig = {
   consumer_key: string;
   consumer_secret: string;
   access_token: string;
