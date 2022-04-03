@@ -1,8 +1,7 @@
 {
   "name": "vim-tips-bot",
   "version": "0.0.1",
-  "description":
-    "A vim random tips bot that can be plugged in any bot provider (prove of concept)",
+  "description": "A vim random tips bot that can be plugged in any bot provider (prove of concept)",
   "main": "src/index.ts",
   "repository": "git@github.com:cristianoliveira/vim-tips.git",
   "author": "Cristian Oliveira <contato@cristianoliveira.com.br>",
@@ -14,8 +13,8 @@
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jest": "^22.0.0",
-    "jest": "^23.6.0",
-    "ts-jest": "^23.10.5",
+    "jest": "^27.5.1",
+    "ts-jest": "^27.1.4",
     "typescript": "^3.1.6",
     "typescript-eslint-parser": "^21.0.1"
   },
@@ -27,7 +26,7 @@
     "@types/dotenv": "^6.1.0",
     "@types/node-cron": "^2.0.0",
     "@types/twit": "^2.2.20",
-    "axios": "^0.18.0",
+    "axios": "^0.26.1",
     "dotenv": "^6.1.0",
     "node-cron": "^2.0.3",
     "random-item": "^1.0.0",
