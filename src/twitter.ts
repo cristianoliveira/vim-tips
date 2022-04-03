@@ -1,4 +1,4 @@
-import twit from 'twit';
+import twit from "twit";
 
 export const makePoster = (): any => {
   const config = {
@@ -9,8 +9,15 @@ export const makePoster = (): any => {
   };
 
   const Twitter = new twit(config);
-  return (msg: string): void =>
-    Twitter.post('statuses/update', { status: msg }, (err, data, response) =>
-      console.log(err, data, response),
-    );
+  return (msg: string): Promise<any> => {
+    return new Promise((resolve, reject) => {
+      Twitter.post("statuses/update", { status: msg }, (err, data) => {
+        if (err) {
+          return reject(err);
+        }
+
+        resolve(data);
+      });
+    });
+  };
 };

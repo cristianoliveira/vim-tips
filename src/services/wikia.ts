@@ -34,7 +34,7 @@ export const fetchRandomTip = (): Promise<WikiaArticle> =>
 
 export const fetchArticleDetails = ({
   id,
-}: WikiaArticleDetail): Promise<WikiaArticleDetail> =>
+}: WikiaArticle): Promise<WikiaArticleDetail> =>
   axios
     .get(`${API}/Articles/Details?ids=${id}`)
     .then(({ data }) => data.items[id]);
