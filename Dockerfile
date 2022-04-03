@@ -1,9 +1,9 @@
-FROM node:8-slim
+FROM node:17.7.1
 
 WORKDIR /app
 
 COPY . /app
-RUN npm install
+RUN yarn
 
-EXPOSE 3000
+EXPOSE 4000
 CMD [ "yarn", "start" ]

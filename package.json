@@ -7,7 +7,8 @@
   "author": "Cristian Oliveira <contato@cristianoliveira.com.br>",
   "license": "MIT",
   "engines" : {
-    "node" : ">=v17.4.0"
+    "node": ">=17.4.0",
+    "yarn": ">=1.22.17"
   },
   "devDependencies": {
     "@types/jest": "^23.3.9",
