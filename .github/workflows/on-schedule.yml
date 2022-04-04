@@ -7,5 +7,7 @@ jobs:
   post_tip:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v1
       - name: Every time
         run: sh ./scripts/post-twitter.sh
