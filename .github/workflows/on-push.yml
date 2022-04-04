@@ -7,6 +7,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '17.4'
+          cache: 'yarn'
+      - name: Setup
+        run: yarn
       - name: Building
         run: yarn build
       - name: Testing
