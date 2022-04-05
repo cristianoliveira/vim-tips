@@ -1,11 +1,12 @@
+name: Cypress e2e checks
 on:
-  schedule:
-    # Post a new tip every day at 8:30
-    - cron: '30 8 * * *'
+  pull_request:
+    types: [ labeled ]
 
 jobs:
-  post_tip:
+  post:
     name: Posting to twitter
+    if: ${{ github.event.label.name == 'post-twitter' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
