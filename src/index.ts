@@ -26,7 +26,7 @@ const twitterConfigs: TwitterConfig = {
 const postToTwitter = makePoster(twitterConfigs);
 
 app.use(express.json());
-app.get("/", async (req: express.Request, res: express.Response) => {
+app.get("/", async (_req: express.Request, res: express.Response) => {
   const routes = [
     {
       method: "GET",
@@ -39,7 +39,7 @@ app.get("/", async (req: express.Request, res: express.Response) => {
   res.json({ routes });
 });
 
-app.get("/tips", async (req: express.Request, res: express.Response) => {
+app.get("/tips", async (_: express.Request, res: express.Response) => {
   const tip = await fetchRandomTip();
   const details = await fetchArticleDetails(tip);
 
