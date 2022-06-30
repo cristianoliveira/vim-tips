@@ -1,10 +1,9 @@
 # vim-tips
 
-A vim random tips bot that can be plugged in any bot provider (prove of concept)
+A learning purpose bot for twitter, learn a new VIM feature everyday :)
 
-# Why?
-
-Practice Typescript, and because why not?
+Liked the project? Contribute:
+https://www.buymeacoffee.com/vimclub
 
 # Why VIM?
 
