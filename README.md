@@ -15,7 +15,7 @@ from my responsabilities as a VIM user. :P
 
 Using yarn
 ```bash
-  yarn && yarn start
+yarn && yarn start
 ```
 
 Using docker:
