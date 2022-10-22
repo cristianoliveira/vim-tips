@@ -1,6 +1,7 @@
 on:
   schedule:
     # Post a new tip every day at 8:30
+    workflow_dispatch:
     - cron: '30 8 * * *'
 
 jobs:
