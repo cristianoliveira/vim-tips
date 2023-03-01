@@ -14,4 +14,5 @@ jobs:
       - name: Post tip of the day
         run: sh ./scripts/post-twitter.sh
         env:
+          SERVICE_API_URL: ${{ secrets.SERVICE_API_URL }}
           VIM_TIPS_API_SECRET: ${{ secrets.VIM_TIPS_API_SECRET }}
