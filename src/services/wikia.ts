@@ -1,7 +1,7 @@
-import axios from 'axios';
-import randomItem from 'random-item';
+import axios from "axios";
+import randomItem from "random-item";
 
-export const WIKI_URL = 'http://vim.wikia.com';
+export const WIKI_URL = "http://vim.wikia.com";
 const API = `${WIKI_URL}/api/v1`;
 
 type WikiaArticle = {
@@ -30,7 +30,7 @@ type WikiaArticleDetails = {
 export const fetchRandomTip = (): Promise<WikiaArticle> =>
   axios
     .get(`${API}/Articles/Top`)
-    .then(articles => randomItem(articles.data.items));
+    .then((articles) => randomItem(articles.data.items));
 
 export const fetchArticleDetails = ({
   id,
@@ -42,5 +42,8 @@ export const fetchArticleDetails = ({
 export const formatPost = (article: WikiaArticleDetail): string =>
   `Vim tip of the day: ${article.title}
 
+${article.abstract}
+
+Details:
 ${WIKI_URL}${article.url}
 `;
