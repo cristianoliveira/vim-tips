@@ -26,7 +26,8 @@
   "scripts": {
     "build": "tsc",
     "start": "yarn build && node build/index.js",
-    "run:post": "ts-node build/lib/index.js",
+    "run:post": "yarn build && node build/lib/index.js",
+    "dev:post": "ts-node src/lib/index.ts",
     "publish:twitter": "sh scripts/post-twitter.sh"
   },
   "dependencies": {
