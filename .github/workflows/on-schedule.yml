@@ -2,7 +2,7 @@ on:
   workflow_dispatch:
   schedule:
     # Post a new tip every day at 8:30
-    - cron: '30 8 * * *'
+    - cron: "30 8 * * *"
 
 jobs:
   post_tip:
@@ -11,6 +11,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "17.4"
+          cache: "yarn"
+      - name: Setup
+        run: yarn
       - name: Post tip of the day
         run: sh ./scripts/post-twitter.sh
         env:
