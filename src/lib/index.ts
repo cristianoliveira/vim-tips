@@ -17,17 +17,12 @@ const twitterConfigs: TwitterConfig = {
 
 const postToTwitter = makePoster(twitterConfigs);
 
-const post = async () => {
+const main = async () => {
   const tip = await fetchRandomTip();
   const article = await fetchArticleDetails(tip);
+  await postToTwitter(formatPost(article));
 
-  try {
-    await postToTwitter(formatPost(article));
-
-    console.log("Tip successfully published");
-  } catch (e) {
-    console.error(e);
-  }
+  console.log("Tip successfully published");
 };
 
-post();
+main();
