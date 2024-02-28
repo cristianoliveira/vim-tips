@@ -1,46 +1,17 @@
 {
-  "name": "vim-tips-bot",
-  "version": "0.0.1",
-  "description": "A vim random tips bot that can be plugged in any bot provider (prove of concept)",
+  "name": "vim-tips",
+  "version": "1.0.0",
+  "description": "Set of scripts that powers the @ClubVim Twitter account",
   "main": "src/index.ts",
-  "repository": "git@github.com:cristianoliveira/vim-tips.git",
-  "author": "Cristian Oliveira <contato@cristianoliveira.com.br>",
-  "license": "MIT",
-  "engines": {
-    "node": ">=17.4.0",
-    "yarn": ">=1.22.17"
-  },
-  "devDependencies": {
-    "@types/jest": "^23.3.9",
-    "@types/node": "^17.0.23",
-    "eslint": "^8.12.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jest": "^22.0.0",
-    "jest": "^27.5.1",
-    "ts-jest": "^27.1.4",
-    "ts-node": "^10.9.1",
-    "typescript": "^3.1.6",
-    "typescript-eslint-parser": "^21.0.1"
-  },
   "scripts": {
-    "build": "tsc",
-    "start": "yarn build && node build/index.js",
-    "run:post": "yarn build && node build/lib/index.js",
-    "dev:post": "ts-node src/lib/index.ts",
-    "publish:twitter": "sh scripts/post-twitter.sh"
+    "post": "bun scripts/post.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "Cristian Oliveira",
+  "license": "ISC",
   "dependencies": {
-    "@types/dotenv": "^6.1.0",
-    "@types/express": "^4.17.13",
-    "@types/twit": "^2.2.20",
-    "@typescript-eslint/eslint-plugin": "^5.17.0",
-    "@typescript-eslint/parser": "^5.17.0",
-    "axios": "^0.26.1",
-    "dotenv": "^16.0.0",
-    "express": "^4.17.3",
-    "prettier": "^2.6.2",
-    "random-item": "^1.0.0",
-    "twit": "^2.2.11"
+    "dotenv": "^16.3.1",
+    "ts-node": "^10.9.1",
+    "twitter-api-v2": "^1.15.2"
   }
 }

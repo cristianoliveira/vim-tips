@@ -1,0 +1,134 @@
+{
+  "tips": [
+    {
+      "title": "Vim Jump Commands",
+      "text": "Navigation with vim is easy! Use ']' to jump in, 'CTRL-o' to jump back to previous locations and 'CTRL-i' to go forward. This is the way to explore large codebases.",
+      "length": 181
+    },
+    {
+      "title": "Vim Buffer Management",
+      "text": "Easily switch between files in vim! Use ':ls' to list all buffers and ':bN' (where N is the buffer number) to switch. Manage multiple files at once.",
+      "length": 200
+    },
+    {
+      "title": "Vim Quick Save",
+      "text": ":w saves your file in Vim. But did you know? In Normal mode, pressing 'ZZ' (Shift + zz) does the same, and 'ZQ' (Shift + zq) quits without saving. I bet you didn't know that, at least I didn't.",
+      "length": 190
+    },
+    {
+      "title": "Vim Quick Search",
+      "text": "Use '/search_term' to find and 'n' to jump to the next instance. 'N' takes you backwards. Plus tip, the search term is stored in register '/', try this ':s/<C-r>//foo/g'",
+      "length": 186
+    },
+    {
+      "title": "Vim Visual Line Mode",
+      "text": "Select whole lines effortlessly with 'V' in Normal mode. Once selected, apply commands like ':s/search/replace/' or change case with '~'.",
+      "length": 190
+    },
+    {
+      "title": "Vim Smart Indentation",
+      "text": "Indent blocks of code using '>>' and unindent with '<<'. To adjust multiple lines, try 'V' to select, then '>' or '<'. You can combine this with other motions like 'gg' or 'G'.",
+      "length": 184
+    },
+    {
+      "title": "Vim Command Repeat",
+      "text": "The '.' command in Vim repeats the last change. So, after a replace or deletion, just move to a new spot and hit '.' to redo the action. You may not need a macro ;)",
+      "length": 186
+    },
+    {
+      "title": "Vim Split Windows",
+      "text": "Work on multiple files simultaneously! Use ':split' or ':vsp' to divide the editor horizontally or vertically. Navigate with 'CTRL-w' followed by 'hjkl' keys.",
+      "length": 190
+    },
+    {
+      "title": "Vim Undo & Redo",
+      "text": "Made a mistake? 'u' undoes the last action in Vim. More errors? Keep pressing 'u'. To redo, press 'CTRL-r'. That save lives.",
+      "length": 175
+},
+  {
+      "title": "Vim Fast Movement",
+      "text": "Jump around! Use '0' for line start, '^' for the first non-blank character, and '$' for line end. 'w' and 'b' move by words.",
+      "length": 187
+    },
+    {
+      "title": "Vim Macro Magic",
+      "text": "Automate repetitive tasks! Start recording a macro with 'q', followed by a register (a-z). Execute your commands and press 'q' to stop. Play it with '@' followed by the register.",
+      "length": 199
+    },
+    {
+      "title": "Vim Vertical Selection",
+      "text": "Make vertical selections using 'Ctrl-v'. Then, edit in block mode with 'I' or 'A'. Perfect for adding comments or altering data in colunms.",
+      "length": 178
+    },
+    {
+      "title": "Vim Window Resizing",
+      "text": "Adjust split window size using 'Ctrl-w' + '+' to increase and '-' to decrease height. Use '>' and '<' to adjust width. Or '=' to resize all equally.",
+      "length": 161
+    },
+    {
+      "title": "Vim Join Lines",
+      "text": "Merge lines with 'J'. It joins the line below to the current line, separated by a space. Clean up formatting or combine statements!",
+      "length": 160
+    },
+    {
+      "title": "Vim Dictionary Autocomplete",
+      "text": "In Insert mode, use 'Ctrl-x Ctrl-k' to trigger dictionary-based word completion. Perfect for typing complex words or checking spelling!",
+      "length": 182
+    },
+    {
+      "title": "Vim Multi-Change",
+      "text": "Apply changes to multiple instances at once with ':%s/old/new/g'. Replace 'old' with 'new' throughout the entire file in one go!",
+      "length": 161
+    },
+    {
+      "title": "Vim Instant File Search",
+      "text": "Find files instantly with ':find filename'. Use with ':set path+=**' to search recursively in directories. Swiftly navigate projects!",
+      "length": 180
+    },
+    {
+      "title": "Vim Text Object Selection",
+      "text": "Select text objects easily with 'a' or 'i' followed by a delimiter (e.g., 'aw' for a word, 'ap' for a paragraph). Precise text manipulation!",
+      "length": 183
+    },
+    {
+      "title": "Vim Change Case",
+      "text": "Toggle case of characters with 'g~' followed by a motion. For instance, 'g~iw' toggles the case of the inner word. Modify text case on the fly!",
+      "length": 195
+    },
+    {
+      "title": "Vim Auto-Commands",
+      "text": "Set actions on specific events with ':au'. For instance, auto-save on buffer change with ':au BufWritePre * :w'. Automate your Vim workflow!",
+      "length": 188
+    },
+    {
+      "title": "Vim Panes to Tabs",
+      "text": "Convert a split window into a tab with ':tab split'. Manage your workspace dynamically by switching between tabs and splits!",
+      "length": 167
+    },
+    {
+      "title": "Vim External Commands",
+      "text": "Run external commands directly with ':!'. E.g., ':!ls' lists directory contents. Integrate Vim with your system shell seamlessly!",
+      "length": 174
+    },
+    {
+      "title": "Vim Wild Menu",
+      "text": "Navigate command-line completion with ':set wildmenu'. As you type commands or filenames, use the arrow keys to cycle through options. Efficient command input!",
+      "length": 215
+    },
+    {
+      "title": "Vim Marks",
+      "text": "Set a mark with 'm' followed by a letter. Jump back to it with '''letter'. Mark important positions and navigate back in a flash!",
+      "length": 168
+    },
+    {
+      "title": "Vim Auto-Indent",
+      "text": "Format your code with 'gg=G'. It auto-indents the entire file based on your current indentation settings. Maintain consistent code structure effortlessly!",
+      "length": 203
+    },
+    {
+      "title": "Vim Open Recent Files",
+      "text": "Access recently opened files with ':browse oldfiles'. Choose a number to open the file. Resume your work without searching for files!",
+      "length": 184
+    }
+  ]
+}
